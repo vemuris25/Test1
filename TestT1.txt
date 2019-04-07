@@ -1,1 +1,3 @@
 This is my first experiment on GitHub.
+
+SOme enhancements to the git hub.
