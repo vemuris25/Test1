@@ -1,11 +1,10 @@
 pipeline{
-agent any
-stages{
-stage ('First')
-{
-echo 'First Display message'
-}
-
-}
-
+    agent any
+    stages{
+        stage ('First'){
+          steps{
+            echo 'First Display message'
+            }
+            }
+      }
 }
