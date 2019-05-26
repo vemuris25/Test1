@@ -14,7 +14,7 @@ pipeline{
             ok "Yes, we should."
             submitter "Srinivas,Vemuri"
             }
-            milestone()
+            //milestone()
             echo 'First Display message'
             }
             }
