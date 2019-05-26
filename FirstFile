@@ -1,8 +1,5 @@
 pipeline{
-    agent 
-    {
-    label 'FirstPipeline'
-    }
+    agent none
     stages{
         stage ('First'){
           steps{
