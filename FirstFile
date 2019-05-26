@@ -10,9 +10,11 @@ pipeline{
         stage ('Second'){
             input{
             message "Hello! This is my first message box?"
+            ok "Yes, Lets us go ahead"
+            submitter "Srinivas,Vemuri"
             }
             steps{
-            //milestone()
+            milestone()
             echo 'First Display message'
             }
             }
