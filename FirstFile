@@ -14,7 +14,7 @@ pipeline{
             submitter "Srinivas,Vemuri"
             }
             steps{
-            milestone()
+            //milestone()
             echo 'First Display message'
             }
             }
