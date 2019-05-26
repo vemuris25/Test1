@@ -1,7 +1,7 @@
 pipeline{
     agent 
     {
-    label 'Hello World'
+    label 'FirstPipeline'
     }
     stages{
         stage ('First'){
