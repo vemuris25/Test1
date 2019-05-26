@@ -8,9 +8,13 @@ pipeline{
             }
             
         stage ('Second'){
-          input('Can we go ahead')
-          milestone()
-          steps{
+            steps{
+            input {
+            message "Are you able to read this"
+            ok "Yes, we should."
+            submitter "Srinivas,Vemuri"
+            }
+            milestone()
             echo 'First Display message'
             }
             }
