@@ -1,6 +1,7 @@
 pipeline{
     agent none
     stages{
+    parallel{
         stage ('First'){
           steps{
             echo 'First Display message'
@@ -18,6 +19,6 @@ pipeline{
             echo 'First Display message'
             }
             }
-                        
+         }               
       }
 }
