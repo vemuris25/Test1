@@ -1,45 +1,14 @@
 stage('Build') {
   node {
     echo 'Building artifacts...'
-    sleep 2
+    sleep 210
     echo 'Building artifacts finished'
-  }
-}
-
-milestone 1
-stage('QA') {
-  lock(resource: 'qaEnvironment', inversePrecedence: true) {
-    milestone 2
-    parallel("Integration Tests": {
-      node {
-        echo 'Running integration tests...'
-        sleep 45
-        echo 'Running integration tests finished'
-      }
-    }, "Performance Tests": {
-        echo 'Running performance tests...'
-        sleep 60
-        echo 'Running performance tests finished'
-    })
-  }
-}
-
-milestone 3
-stage('Staging') {
-  lock(resource: 'stagingEnvironment', inversePrecedence: true) {
-    milestone 4
-    node {
-      echo 'Deployment to staging environment...'
-      sleep 5
-      echo 'Deployment to staging environment finished'
-    }
-    input message: 'Deploy to production?'
   }
 }
 
 milestone 5
 stage ('Production') {
-  lock(resource: 'productionEnvironment', inversePrecedence: true) {
+ // lock(resource: 'productionEnvironment', inversePrecedence: true) {
     node {
       echo 'Deployment to production environment...'
       sleep 5
