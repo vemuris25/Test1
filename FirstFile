@@ -3,13 +3,10 @@ pipeline{
     stages{            
         stage ('Second'){
             steps{
-                milestone()
+                milestone 1
+                input message : 'Çontinue?'
                 echo 'First Display message'
             }
-            }
-           milestone()
-           {
-            input message: 'Continue?'
             }
          }  
 }
