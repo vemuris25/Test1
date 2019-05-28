@@ -13,12 +13,12 @@ stage('QA') {
     parallel("Integration Tests": {
       node {
         echo 'Running integration tests...'
-        sleep 5
+        sleep 45
         echo 'Running integration tests finished'
       }
     }, "Performance Tests": {
         echo 'Running performance tests...'
-        sleep 10
+        sleep 60
         echo 'Running performance tests finished'
     })
   }
