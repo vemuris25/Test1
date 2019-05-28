@@ -1,7 +1,7 @@
 stage('Build') {
   node {
     echo 'Building artifacts...'
-    sleep 210
+    sleep 2
     echo 'Building artifacts finished'
   }
 }
@@ -11,7 +11,7 @@ stage ('Production') {
  // lock(resource: 'productionEnvironment', inversePrecedence: true) {
     node {
       echo 'Deployment to production environment...'
-      sleep 5
+      sleep 50
       echo 'Deployment to production environment finished'
     }
   }
