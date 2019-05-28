@@ -1,21 +1,15 @@
 pipeline{
     agent none
-    stages{
-        stage ('First'){
-          steps{
-                echo 'First Display message '
-            }
-            }
-            
+    stages{            
         stage ('Second'){
-            input{
-                message "Hello! This is my first message box?"
-                ok "Yes, Lets us go ahead"
-            }
             steps{
                 milestone()
                 echo 'First Display message'
             }
+            }
+           milestone()
+           {
+            input message: 'Continue?'
             }
          }  
 }
