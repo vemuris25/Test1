@@ -8,11 +8,11 @@ stage('Build') {
 
 milestone 5
 stage ('Production') {
- // lock(resource: 'productionEnvironment', inversePrecedence: true) {
+  lock(resource: 'productionEnvironment', inversePrecedence: true) {
     node {
       echo 'Deployment to production environment...'
       sleep 50
       echo 'Deployment to production environment finished'
     }
   }
-//}
+}
